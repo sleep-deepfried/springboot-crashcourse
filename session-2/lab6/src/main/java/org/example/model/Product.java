@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 import java.util.Objects; // Used for Objects.hash and Objects.equals
 
