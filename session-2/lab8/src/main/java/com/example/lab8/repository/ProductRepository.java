@@ -74,19 +74,4 @@ public class ProductRepository {
             return product; // Or throw new IllegalArgumentException("Product not found for update");
         }
     }
-
-    @RestController
-    public class ProductController{
-        private final ProductRepository productRepository; // Declare the dependency
-
-        // Constructor Injection: Spring will automatically provide ProductRepository here
-        public ProductController(ProductRepository productRepository) {
-            this.productRepository = productRepository;
-        }
-
-        @GetMapping("/products") // Maps HTTP GET requests to /products
-        public List<Product> getAllProducts() {
-            return productRepository.findAll(); // Call our repository to get all products
-        }
-    }
 }
